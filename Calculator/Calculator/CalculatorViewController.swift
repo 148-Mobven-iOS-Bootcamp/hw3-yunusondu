@@ -44,9 +44,10 @@ class CalculatorViewController: UIViewController {
 
     @IBAction func operationButtonTapped(_ sender: UIButton) {
         userIsTyping = false
-        brain.setOperand(result)
-        brain.performOperation(sender.titleLabel?.text ?? "")
+        brain.setOperand(operand: result)
+        brain.performOperation(symbol: sender.titleLabel?.text ?? "")
         result = brain.result
+        
     }
 }
 
